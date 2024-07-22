@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Below Slider Header</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .slider {
+            width: 100%;
+            height: 620px;
+            background-color: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+        .header-below-slider {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: pink;
+            padding: 20px;
+            border-bottom: 2px solid #ddd;
+        }
+        .header-below-slider .logo img {
+            max-height: 50px;
+        }
+        .header-below-slider .nav {
+            display: flex;
+            gap: 20px;
+        }
+        .header-below-slider .nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .header-below-slider .nav a:hover {
+            color: #007bff;
+        }
+        .round{
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+    </div>
+    <header class="header-below-slider">
+        <div class="logo">
+            <img src="download rose.jpg" alt="Logo" class="round">
+        </div>
+        <nav class="nav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+</body>
+</html>

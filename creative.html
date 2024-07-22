@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Vertical Header</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+        }
+        .header-vertical {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color:red;
+            padding: 20px;
+            width: 200px;
+            border-right: 2px solid pink;
+        }
+        .header-vertical .logo {
+            margin-bottom: 20px;
+        }
+        .header-vertical .logo img {
+            max-height: 50px;
+        }
+        .header-vertical .nav {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+        }
+        .header-vertical .nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            padding: 60px;
+        }
+        .header-vertical .nav a:hover {
+            color: pink;
+        }
+        .content {
+            flex: 1;
+            padding: 30px;
+        }
+        .round{
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <header class="header-vertical">
+        <div class="logo">
+            <img src="download jack.jpg" alt="Logo" class="round">
+        </div>
+        <nav class="nav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <div class="content">
+        <!-- Main content goes here -->
+        <h1>Welcome to Our Website</h1>
+        <p>This is where the main content will be displayed.</p>
+    </div>
+</body>
+</html>

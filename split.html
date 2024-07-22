@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> split </title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header-centered {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: lightgreen;
+            padding: 10px 20px;
+            border-bottom: 2px solid #ddd;
+        }
+        .header-centered .logo {
+            display: flex;
+            justify-content: center;
+            flex: 1;
+        }
+        .header-centered .logo img {
+            max-height: 50px;
+        }
+        .header-centered .nav-left,
+        .header-centered .nav-right {
+            display: flex;
+            gap: 20px;
+            flex: 1;
+        }
+        .header-centered .nav-left {
+            justify-content: flex-start;
+        }
+        .header-centered .nav-right {
+            justify-content: flex-end;
+        }
+        .header-centered .nav-left a,
+        .header-centered .nav-right a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .header-centered .nav-left a:hover,
+        .header-centered .nav-right a:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <header class="header-centered">
+        <nav class="nav-left">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+        </nav>
+        <div class="logo">
+            <img src="download rose.jpg" alt="Logo">
+        </div>
+        <nav class="nav-right">
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+</body>
+</html>

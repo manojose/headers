@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazine Style Header</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header-magazine {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: black;
+            padding: 20px;
+            border-bottom: 2px solid black;
+        }
+        .header-magazine .logo img {
+            max-height: 50px;
+        }
+        .header-magazine .nav {
+            display: flex;
+            gap: 20px;
+        }
+        .header-magazine .nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        .header-magazine .nav a:hover {
+            color: black;
+        }
+        .round{
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <header class="header-magazine">
+        <div class="logo">
+            <img src="download rose.jpg" alt="Logo" class="round">
+        </div>
+        <nav class="nav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+</body>
+</html>

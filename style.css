@@ -1,0 +1,602 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: white;
+    color: black;
+}
+
+/* Header styling */
+header {
+    background-color: red;
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 5px white(0, 0, 0, 0.2); /* Light shadow for the header */
+    z-index: 1000; /* Ensure header is above other content */
+}
+
+/* Navigation styling within header */
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: red;
+    text-decoration: none;
+    font-size: 18px;
+    transition: text-decoration 0.3s ease;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Ensure main content starts below the fixed header */
+main {
+    padding: 20px;
+    margin-top: 60px; /* Adjust this value to match the height of your header */
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: red;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for sections */
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color:red;
+    box-shadow: 0 4px 8px white(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    background: linear-gradient(to right, rgba(50, 46, 46, 0.333), rgba(239, 246, 245, 0.201), rgba(4, 5, 3, 0));
+    background-size: 600%;
+    animation: gradientAnimation 15s linear infinite;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px white(0, 0, 0, 0.2);
+}
+
+/* Profile section animation */
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    animation: profileAnimation 3s alternate infinite;
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+}
+
+.profile:hover img {
+    transform: scale(1.1);
+}
+
+@keyframes profileAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
+
+/* Skills section styling */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skill {
+    width: calc(50% - 10px);
+    margin-bottom: 10px;
+}
+
+.skill .label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+progress {
+    width: 100%;
+    height: 20px;
+    margin-top: 5px;
+}
+
+/* Projects section styling */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.project h3 {
+    margin-top: 0;
+    color: #4f09e5;
+}
+
+.project p {
+    margin-bottom: 10px;
+}
+
+.project-links a {
+    color: #4f09e5;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.project-links a:hover {
+    text-decoration: underline;
+}
+
+/* Certificates section styling */
+.certificates {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.certificates img {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Resume section styling */
+#resume {
+    text-align: center;
+}
+
+#resume button {
+    background-color: #4f09e5;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#resume button:hover {
+    background-color: #2f0672;
+}
+
+/* Contact section styling */
+#contact {
+    text-align: center;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#contact-form label {
+    font-weight: bold;
+}
+
+#contact-form input[type="text"],
+#contact-form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact-form textarea {
+    resize: vertical;
+}
+
+#contact-form input[type="button"] {
+    background-color: #4f09e5;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#contact-form input[type="button"]:hover {
+    background-color: #2f0672;
+}
+
+/* Social icons styling */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    font-size: 24px;
+    color: #4f09e5;
+    margin: 0 10px;
+}
+
+.social-icons a:hover {
+    color: #2f0672;
+}
+
+/* Footer styling */
+footer {
+    background-color: #4f09e5;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+#certs {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background color for better visibility */
+}
+
+.certificates {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Default to 4 columns */
+    gap: 20px; /* Space between grid items */
+}
+
+.certificate-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px; /* Rounded corners for the container */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.certificate-item img {
+    width: 100%; /* Make images fit their container */
+    height: auto; /* Maintain aspect ratio of images */
+    object-fit: cover; /* Ensure images cover the container without distortion */
+    transition: transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.certificate-item:hover img {
+    transform: scale(1.1); /* Scale up the image on hover */
+}
+
+.certificate-item p {
+    margin: 10px 0 0; /* Margin for the text */
+    text-align: center; /* Center-align the text */
+    font-size: 16px; /* Font size for the text */
+    color: #333; /* Text color */
+}
+.cen{
+    
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Center the text */
+        color: white; /* Text color for contrast */
+        font-size: 18px; /* Font size for the text */
+        text-align: center; /* Center-align the text */
+        background: black(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+        padding: 10px; /* Padding around the text */
+        border-radius: 5px; /* Optional: rounded corners for the background */
+
+}
+#certs {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background color for better visibility */
+}
+
+.certificates {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Default to 4 columns */
+    gap: 20px; /* Space between grid items */
+}
+
+.certificate-item {
+    text-align: center; /* Center-align text */
+    border-radius: 5px; /* Rounded corners for the container */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.certificate-item img {
+    width: 100%; /* Make images fit their container */
+    height: auto; /* Maintain aspect ratio of images */
+    object-fit: cover; /* Ensure images cover the container without distortion */
+    transition: transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.certificate-item:hover img {
+    transform: scale(1.1); /* Scale up the image on hover */
+}
+
+.certificate-text {
+    margin-top: 10px; /* Space between the image and the text */
+    font-size: 16px; /* Font size for the text */
+    color: #333; /* Text color */
+}
+
+@media (max-width: 1200px) {
+    .certificates {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for medium-sized screens */
+    }
+}
+
+@media (max-width: 900px) {
+    .certificates {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .certificates {
+        grid-template-columns: 1fr; /* 1 column for very small screens */
+    }
+}
+
+@media (max-width: 1200px) {
+    .certificates {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for medium-sized screens */
+    }
+}
+
+@media (max-width: 900px) {
+    .certificates {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .certificates {
+        grid-template-columns: 1fr; /* 1 column for very small screens */
+    }
+}
+
+#projects {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background color for better visibility */
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+    gap: 20px; /* Space between grid items */
+}
+
+.project {
+    background: #fff; /* Background color for each project item */
+    border: 1px solid #ddd; /* Border around each project item */
+    border-radius: 5px; /* Rounded corners for the project items */
+    padding: 20px; /* Padding inside each project item */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for a lifted effect */
+    text-align: center; /* Center-align text */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.project:hover {
+    transform: scale(1.05); /* Slightly enlarge the project item on hover */
+    box-shadow: 0 4px 10px white(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.project h3 {
+    margin: 0 0 10px; /* Margin for the project title */
+    font-size: 1.5rem; /* Font size for the title */
+}
+
+.project p {
+    margin: 0 0 20px; /* Margin for the project description */
+    font-size: 1rem; /* Font size for the description */
+    color: #666; /* Text color for the description */
+}
+
+.project-links {
+    display: flex;
+    justify-content: center; /* Center-align the links */
+    gap: 10px; /* Space between the links */
+}
+
+.project-links a {
+    text-decoration: none; /* Remove underline from links */
+    color: #007bff; /* Color for the links */
+    font-size: 1rem; /* Font size for the links */
+    display: flex;
+    align-items: center; /* Center-align icons with text */
+    gap: 5px; /* Space between icon and text */
+}
+
+.project-links a:hover {
+    color: #0056b3; /* Darker color on hover */
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header, footer {
+    padding: 1rem;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a {
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+main {
+    padding: 2rem;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-right: 1rem;
+}
+
+.profile .text {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.skills, .projects, .certificates {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skill, .project, .certificate-item {
+    flex: 1 1 45%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+progress {
+    width: 100%;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    color: #f0f0f0;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 8px ;
+    border: rgb(255, 255, 255);
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Default (Dusky White) Theme */
+body {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header, footer {
+    background-color: black;
+    color: #333;
+}
+
+nav ul {
+    background-color: #ddd;
+}
+
+nav ul li a {
+    color: #333;
+}
+
+.skill, .project, .certificate-item {
+    background-color: pink;
+    color: #333;
+}
+
+/* Black Theme */
+body.black-theme {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+header.black-theme, footer.black-theme {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+nav.black-theme ul {
+    background-color: #333;
+}
+
+nav.black-theme ul li a {
+    color: #f0f0f0;
+}
+
+.black-theme .skill, .black-theme .project, .black-theme .certificate-item {
+    background-color: #333;
+    color: #f0f0f0;
+    border-color: #444;
+}
+
+section {
+    background-color: white;
+    padding: 2rem;
+    margin: 1rem 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+section.black-theme {
+    background-color: white;
+    color: white;
+}
+
+/* Move Toggle Button to the Left Side */
+#theme-toggle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}

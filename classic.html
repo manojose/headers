@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Header</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header-classic {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color:black;
+            padding: 10px 20px;
+            border-bottom: 2px solid khaki;
+        }
+        .header-classic .logo img {
+            max-height: 20px;
+        }
+        .header-classic .nav a {
+            text-decoration: none;
+            color: red;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+        .header-classic .nav a:hover {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header class="header-classic">
+        <div class="logo">
+            <img src="download jack.jpg" alt="Logo">
+        </div>
+        <nav class="nav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+</body>
+</html>
